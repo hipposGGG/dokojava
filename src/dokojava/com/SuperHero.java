@@ -21,12 +21,12 @@ public class SuperHero extends Hero {
 	public void run() {
 		System.out.println("自慢の羽を使って撤退した");
 	}
-	
+
+	@Override
 	public void attack(Matango m) {
-		super.attack(m);
-		if(this.flying) {
-			super.attack(m);
-		}
+		// TODO 自動生成されたメソッド・スタブ
+		
 	}
+	
 	
 }

@@ -1,24 +1,13 @@
 package dokojava.com;
 
+import java.util.Date;
+
 public class Main{
-	
 	public static  void main(String[] args) throws InterruptedException {
-		//Swordインスタンス　炎の剣
-		Sword s = new Sword();
-		s.name = "炎の剣";
-		s.damage = 10;
-		
-		//Heroインスタンス　かずき
-		Hero h = new Hero("かずき");
-		h.hp = 1000;
-		h.sword = s;
-		System.out.println("現在の所持武器は、【　　" + h.sword.name + "　　】");
-		
-		SuperHero sh = new SuperHero();
-		
-		
-		
+		Date d = new Date();
+		System.out.println(d);
+		System.out.println(d.getTime());
+		Date dd = new Date(131662222593L);
+		System.out.println(dd);
 	}
-	
-	
 } 

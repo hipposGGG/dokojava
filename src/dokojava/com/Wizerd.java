@@ -1,7 +1,7 @@
 package dokojava.com;
 
 public class Wizerd extends Character{
-	private String name;
+	String name;
 	private int hp;
 	private int mp;
 	private Wand wand;
@@ -60,7 +60,7 @@ public class Wizerd extends Character{
 		m.hp -= 3;
 	}
 	
-	public void fireball(Matango m) {
+	public void fireBall(Matango m) {
 		System.out.println(this.name + "は、火の玉を放った");
 		System.out.println("敵に20ポイントのダメージ");
 		m.hp -= 20;

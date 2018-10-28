@@ -1,6 +1,6 @@
 package dokojava.com;
 
-public class Hero extends Character{
+public abstract class Hero extends Character{
 	private String name;
 	int hp;
 	static int money;
@@ -36,7 +36,7 @@ public class Hero extends Character{
 	}
 	
 	//攻撃
-	public void attack(Matango m) {
+	public void attack(Monster m) {
 		System.out.println(this.name + "の攻撃");
 		System.out.println("敵に10ポイントのダメージを与えた");
 		m.hp -= 10;
@@ -76,7 +76,8 @@ public class Hero extends Character{
 		System.out.println("勇者は別れを告げた"); 
 	 }
 	 //死亡
-	 private void die() {
+	 @SuppressWarnings("unused")
+	private void die() {
 		 System.out.println(this.name + "は死んでしまった");
 		 System.out.println("GAMEOVER");
 	 }

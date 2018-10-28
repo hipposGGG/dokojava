@@ -1,6 +1,6 @@
 package dokojava.com;
 
-public class Cleric {
+public class Cleric extends Character{
 	String name;
 	int hp = 50;
 	static final int max_hp = 50;
@@ -40,6 +40,12 @@ public class Cleric {
 		System.out.println(sec + "秒のお祈りによって");
 		System.out.println(this.name +"は、MPを" + recoActual + "回復した");
 		 return recoActual;
+	}
+
+	@Override
+	public void attack(Matango m) {
+		// TODO 自動生成されたメソッド・スタブ
+		
 	}
 	
 }
