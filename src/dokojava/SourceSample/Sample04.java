@@ -1,5 +1,12 @@
 package SourceSample;
 
+/**
+ * <WEBアプリケーション>
+ * 画面の上部にボタンを２つ置きます。
+ * 開くボタンをクリックしたらファイルを選択して２行読んでテキストフィールドに文字列を出します。
+ * 保存ボタンをクリックしたらファイルを選択してテキストフィールドの文字列をファイルに書き出します。
+ */
+
 import java.awt.Button;
 import java.awt.FileDialog;
 import java.awt.FlowLayout;
