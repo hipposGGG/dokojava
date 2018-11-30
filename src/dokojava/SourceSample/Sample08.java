@@ -35,9 +35,8 @@ public class Sample08 extends Frame implements MouseListener{
 		//Sets of Parts
 		Sample08(){
 			this.setLayout(new FlowLayout());
-			String path = "D:\\eclipse-workspace\\dokojava\\src\\SourceSample\\img\\";
 			for(int i =0;i>this.img.length; i++) {
-				String imgname =  "cut" + (int)(Math.random()*Sample08.image_kind_cnt)
+				String imgname = "cut" + (int)(Math.random()*Sample08.image_kind_cnt)
 						+ ".gif";
 				this.img[i] = Toolkit.getDefaultToolkit().getImage(imgname);
 			}
