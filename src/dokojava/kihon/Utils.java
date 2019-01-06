@@ -1,29 +1,36 @@
 package kihon;
 
-public class Utils {
-//	public static void swap(Integer2 integer2) {
-//		int temp;
-//		System.out.println("  swap() start");
-//		System.out.println("  i = " + i  + ",j = " + j);
-//
-//		temp = integer2.int1;
-//		integer2.int1 = integer2.int2;
-//		integer2.int2 = temp;
-//
-//		System.out.println("  swap() end");
-//		System.out.println("  i = " + i  + ",j = " + j);
-//	}
+import  java.io.*;
 
-	public static class Integer1{
-		private int int1;
-		public Integer1(int i) { this.int1 = i;}
-		public String toStoring() {
-			return Integer.toString(this.int1);
+public class Utils {
+	public static int arraySum(int[] array)
+				throws ArraySumException{
+		int sum =0;
+		for(int i = 0; i < array.length;i++) {
+			if(array[i] > 999) {
+				throw new ArraySumNumUnderException(i);
+			}else if (array[i] < -999) {
+				throw new ArraySumNumOverException(i);
+			}
+			sum += array[i];
 		}
+		return sum;
 	}
-	public static void swap2(Integer1 int1,Integer1 int2) {
-		int temp = int1.int1;
-		int1.int1 = int2.int1;
-		int2.int1 = temp;
+
+
+	public static void displayFile(String fileName) throws FileNotFoundException,IOException {
+		BufferedReader in = null;
+		try {
+			//　ファイルOPEN
+			in = new BufferedReader(new FileReader(fileName));
+			//　標準出力へ出力
+			String temp;
+			while((temp = in.readLine()) != null) {
+				System.out.println(temp);
+			}
+		}finally {
+			// ファイルCLOSE
+			if (in != null) {	in.close();}
+		}
 	}
 }
