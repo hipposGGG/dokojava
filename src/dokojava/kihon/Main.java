@@ -1,47 +1,21 @@
 package kihon;
 import  java.io.*;
+import java.util.*;
 
 public class Main {
 	public static void main(String[] args) {
-		int[] data = {824, 170, -1393, 350, 410};
-		int sum = 0;
-		try {
-			sum = Utils.arraySum(data);
-			System.out.println("sum of data = " +sum);
-		}catch(ArraySumException ase) {
-			System.err.println(ase.getMessage());
-			System.err.println("data[ " + ase.getExceptionIndex() + " ] =" + data[ase.getExceptionIndex()] );
+		List<String> li = new ArrayList<>();
+		li.add("A");
+		li.add("B");
+		li.add(0,"C");
+		li.add(2,null);
+		li.add(4,"D");
+		String s= li.remove(1);
+		li.add(1,"E");
+		System.out.println(s);
+		for(Iterator<String> it = li.iterator();it.hasNext();) {
+			System.out.print(it.next()+",");
 		}
-//		Main dispFile3 = new Main();
-//		try {
-//			dispFile3.someProcess(args[0]);
-//		}catch(FileNotFoundException fnfe) {
-//			System.err.println(args[0] + " could not open.");
-//		}catch(IOException ioe) {
-//			System.err.println("IOException caught.");
-//		}
-
+		//C,E,null,B,D
 	}
-
-	public void someProcess(String fileName) throws FileNotFoundException,IOException{
-		Utils.displayFile(fileName);
-	}
-
-
-
-//		CallularPhoneImp cp = new CallularPhoneImp("123-4567");
-//		polymorphism(cp);
-//
-//		System.out.println("---------------------");
-//
-//		FixedPhoneImp fp = new FixedPhoneImp("765-4321","someWhere");
-//		polymorphism(fp);
-//		System.out.println("---------------------");
-//
-//	}
-//
-//	public static void polymorphism(TelephoneI tel) {
-//		tel.receiveCall("456-7890");
-//		tel.hungUp();
-//	}
 }
