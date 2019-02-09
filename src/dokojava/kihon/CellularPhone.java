@@ -14,12 +14,12 @@ public class CellularPhone extends Telephone {
 		System.out.println("batteryRemaining = " + batteryRemaining);
 	}
 
-	//　電池残量の取得
+	/*　電池残量の取得*/
 	public int getBatteryRemaining() {
 		return batteryRemaining;
 	}
 
-	//　電池残量の更新
+	/*　電池残量の更新*/
 	public void setBatteryRemaining(int newRemaingng) {
 		batteryRemaining = newRemaingng;
 	}
@@ -29,7 +29,7 @@ public class CellularPhone extends Telephone {
 		return (batteryRemaining < 1);
 	}
 
-	//　電池残量のチェック(基準値)
+	/*　電池残量のチェック(基準値*/
 	public boolean isBatteryEmpty(int limit) {
 		return (batteryRemaining < limit);
 	}
